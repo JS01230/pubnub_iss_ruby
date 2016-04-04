@@ -13,7 +13,7 @@ First, you the user need a few things:
 
 After you fork the repo. Go to your terminal and run 'ruby app.rb'. From there just watch magic happen before your very eyes. With the exception of the Pubnub dependency, the app uses no non-native gems. This keeps the app stable and enforces responsible programming.
 
-When the app runs, the user is asked to input their address. From there, the app sends the address to an OpenCage API where it is geocoded into coordinates. After this, the app sends a GET request to Opendata's ISS API. It will parse the returned JSON for the coordinates. This is published to the Pubnub channel. After this, the user has the option of running a continuous data stream until the ISS is within 100 miles of the user. If the user chooses yes, the program will run the stream and publish the ISS location to Pubnub every 5 seconds.
+When the app runs, the user is asked to input their address. From there, the app sends the address to an OpenCage API where it is geocoded into coordinates. After this, the app sends a GET request to Open Notify's ISS API. It will parse the returned JSON for the coordinates. This is published to the Pubnub channel. After this, the user has the option of running a continuous data stream until the ISS is within 100 miles of the user. If the user chooses yes, the program will run the stream and publish the ISS location to Pubnub every 5 seconds.
 
 I recommend 5 seconds in order to not overwhelm the channel. However, if you are feeling lucky, you can toggle the Until function to return faster results.
 
